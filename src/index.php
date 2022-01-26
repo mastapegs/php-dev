@@ -27,6 +27,10 @@
             <button>Submit</button>
         </form>
 
+        <?php if (isset($_GET["id"])) : ?>
+            <p>ID: <?=$_GET["id"]?></p>
+        <?php endif ?>
+
         <script>
             const isANumber = (number) => !Number.isNaN(Number(number));
             
