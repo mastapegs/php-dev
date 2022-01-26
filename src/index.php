@@ -20,6 +20,27 @@
                 <li><?= $number ?> - <?= $number ** 2 ?></li>
             <?php endfor ?>
         </ul>
+
+        <form id="idForm">
+            <label for="id">Pokemon ID</label>
+            <input id="id" name="id" type="number" />
+            <button>Submit</button>
+        </form>
+
+        <script>
+            const isANumber = (number) => !Number.isNaN(Number(number));
+            
+            function handleSubmit(event) {
+                const id = document.querySelector("#id").value;
+                if (!isANumber(id)) {
+                    event.preventDefault();
+                }
+            }
+            
+            const form = document.querySelector("#idForm");
+            form.addEventListener("submit", handleSubmit);
+        </script>
+        
     </div>
 </body>
 
