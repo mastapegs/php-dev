@@ -14,13 +14,8 @@
         <h1>Hello, World!</h1>
         <p>From php</p>
 
-        <h2>Rendering a list</h2>
-        <ul>
-            <?php for ($number = 1; $number <= 10; $number++) : ?>
-                <li><?= $number ?> - <?= $number ** 2 ?></li>
-            <?php endfor ?>
-        </ul>
-
+        <h2>PokeAPI GET Request</h2>
+        <p>This is powered by the <a href="https://pokeapi.co/" target="_blank">PokeAPI</a></p>
         <form id="idForm">
             <label for="id">Pokemon ID</label>
             <input id="id" name="id" type="number" value="" />
