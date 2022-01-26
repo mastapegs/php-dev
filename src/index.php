@@ -23,18 +23,17 @@
 
         <form id="idForm">
             <label for="id">Pokemon ID</label>
-            <input id="id" name="id" type="number" value=""/>
+            <input id="id" name="id" type="number" value="" />
             <button>Submit</button>
         </form>
 
-        <?php if (isset($_GET["id"]) && $_GET["id"] != "") : ?>
+        <?php if (isset($_GET["id"])) : ?>
             <?php
             $path = "https://pokeapi.co/api/v2/pokemon/" . $_GET["id"];
             $jsonfile = file_get_contents($path);
             $data = json_decode($jsonfile);
-            // var_dump(json_decode($data));
             ?>
-            <p><?=$data->name?></p>
+            <p><?= $data->name ?></p>
         <?php endif ?>
 
         <script>
